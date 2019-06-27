@@ -1,0 +1,214 @@
+    /*Font interface */
+
+    @font-face {
+      font-family: 'interface';
+      src:  url('../fonts/interface.eot?dbzyv0');
+      src:  url('../fonts/interface.eot?dbzyv0#iefix') format('embedded-opentype'),
+        url('../fonts/interface.ttf?dbzyv0') format('truetype'),
+        url('../fonts/interface.woff?dbzyv0') format('woff'),
+        url('../fonts/interface.svg?dbzyv0#interface') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    [class^="if-"], [class*=" if-"] {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'interface' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .if-settings:before {
+      content: "\f013";
+    }
+    .if-calendar:before {
+      content: "\f073";
+    }
+    .if-magic-wand:before {
+      content: "\f0d0";
+    }
+    .if-add-user:before {
+      content: "\f234";
+    }
+    .if-add-event:before {
+      content: "\f271";
+    }
+
+    /*end*/
+    body
+    {
+        font-family: Verdana;
+        font-size: 8pt;
+        padding:0px;
+        margin:0px;
+        overflow: hidden;
+    }
+
+    .show {
+      display: block !important;
+    }
+    .hidden {
+      display: none !important;
+    }
+
+    /* The main DIV for the map */
+    #map
+    {
+        position: absolute;
+        width: 100%;
+        height:100%;
+        z-index: 0;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    #captions
+    {
+        overflow:hidden;
+    }
+
+    /* Text labels */
+    .text
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+    #legend
+    {
+        position: absolute;
+        right:10px;
+        top:15px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid #eee;
+        float:left;
+        overflow:auto;
+        width: 230px;
+        height:459px;
+        padding:5px;
+    }
+
+    #legend div
+    {
+        margin:2px 10px;
+        height: 42px;
+    }
+    #legend .owner{
+        margin:5px 0px;
+    }
+    #legend .owner p{
+        padding:2 0 0 2;
+    }
+    #legend .ava{
+        position:relative;
+        margin:0 5 0 0;
+        padding:0;
+        float:left;
+        width:50px;
+        height:40px;
+        border-radius:3px;
+        cursor:pointer;
+    }
+    #legend .ava:hover .caption-img{
+        visibility: visible;
+    }
+    #legend .caption-img{
+        position:absolute;
+        top:0px;
+        right:0px;
+        margin:0px;
+        width:40px;
+        height:40px;
+        color:#fff;
+        background: rgba(0,0,0,.7);
+        border-bottom-right-radius:3px;
+        border-top-right-radius:3px;
+        line-height: 1.3em;
+        text-align: center;
+        visibility: hidden;
+    }
+    #legend .caption-img i{
+        margin-top: 15px;
+    }
+    #legend .ava img{
+        /*border-left-width:8px;*/
+        
+        float:right;
+        width:40px;
+        height:40px;
+        border-bottom-right-radius:3px;
+        border-top-right-radius:3px;
+    }
+
+
+    #legend span
+    {
+        padding:2px 0px;
+        float:left;
+        width:100px;
+        height:15px;
+        font-size: 11px;
+        color:#9C9C9C;
+    }
+    #legend p
+    {
+    	display:block;
+    	margin: 0px;
+    	padding:8 0 0 2;
+        font-size:14px;
+    }
+    #map .label
+    {
+        margin: 5px 5px 5px 0;
+    }
+    #date{
+        background-color:#eee; 
+        width:200px; 
+        height:30px; 
+        text-align:center;
+        padding-top:10px; 
+        font-size:15px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    #palette{
+        position:absolute;
+        
+        width:140px;
+        height:40px;
+        z-index:10;
+        background-color: #fff;
+    }
+    #palette .colors{
+        display:inline-block;
+        font-size:0;
+        vertical-align: middle;
+        height: 0px;
+    }
+    #palette span{
+        margin:1 4;
+        display:block;
+    }
+    #palette .colors div{
+        display:inline-block;
+        width:15px;
+        height:15px;
+        margin: 2px;
+        /*border: 2px solid;*/
+       /* border-color:none;
+        border-style:solid;*/
+        border-radius:3px;
+        cursor:pointer;
+    }
+    #palette .colors div:hover{
+        border:#fff 2px solid;
+        margin:0px;
+    }
+ 
