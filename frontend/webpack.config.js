@@ -1,10 +1,10 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const outputDirectory = '/../dist';
+const outputDirectory = '/dist';
 module.exports = {
   entry: {
-    index: ['babel-polyfill', './js/index.js']
+    index: ['babel-polyfill', './src/js/index.js']
   },
   output: {
     path: path.join(__dirname, outputDirectory),
@@ -38,8 +38,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./templates/index.html",
-      filename: "./../dest/index.html"
+      template: "./src/templates/index.html",
+      filename: "./dist/index.html"
     })
   ]
 };
